@@ -1,4 +1,4 @@
-﻿#Requires AutoHotkey v1.1.0+
+﻿#Requires AutoHotkey v1.1.35+
 ;==============================================================
 ; CreateUuidString — UUID string generator using Win32 RPC APIs
 ;
