@@ -32,7 +32,7 @@ createUuidString(byRef rpcStatusUC:="", byRef rpcStatusUTS:="")    {
     rpcStatusUC:=dllCall("Rpcrt4.dll\UuidCreate", "Ptr",&uuid, "Int")
     if (rpcStatusUC!==RPC_S_UUID_NO_ADDRESS)    {
         rpcStatusUTS:=dllCall("Rpcrt4.dll\UuidToString", "Ptr",&uuid, "Ptr*",stringUuid, "Int")
-        if (rpcStatusUT==RPC_S_OK)    {
+        if (rpcStatusUTS==RPC_S_OK)    {
             uuidStr:=strGet(stringUuid)
             dllCall("Rpcrt4.dll\RpcStringFree", "Ptr*",stringUuid, "Int")
             return uuidStr
